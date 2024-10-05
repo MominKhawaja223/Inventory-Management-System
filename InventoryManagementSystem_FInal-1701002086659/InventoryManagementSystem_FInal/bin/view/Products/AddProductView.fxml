@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="548.0" prefWidth="602.0" spacing="20" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddProductController">
+   <children>
+      <Pane prefHeight="540.0" prefWidth="602.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="451.0" layoutX="185.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/inventory.jpeg" />
+               </image>
+            </ImageView>
+            <Separator layoutX="6.0" layoutY="159.0" prefHeight="0.0" prefWidth="589.0" />
+            <Separator layoutX="6.0" layoutY="192.0" prefHeight="0.0" prefWidth="589.0" />
+            <Label layoutX="232.0" layoutY="162.0" text="Add a product">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Label>
+            <Label layoutX="179.0" layoutY="208.0" text="Product Id" />
+            <TextField fx:id="idField" layoutX="274.0" layoutY="203.0" onAction="#onTextEntered" />
+            <TextField fx:id="nameField" layoutX="274.0" layoutY="241.0" onAction="#onTextEntered" />
+            <Label layoutX="153.0" layoutY="246.0" text="Product Name" />
+            <TextField fx:id="descField" layoutX="274.0" layoutY="278.0" onAction="#onTextEntered" />
+            <Label layoutX="168.0" layoutY="283.0" text="Description" />
+            <Label layoutX="125.0" layoutY="331.0" text="     Total Quantity" />
+            <TextField fx:id="qtyField" layoutX="274.0" layoutY="326.0" onAction="#onTextEntered" />
+            <TextField fx:id="minStockField" layoutX="274.0" layoutY="366.0" onAction="#onTextEntered" />
+            <Label layoutX="125.0" layoutY="371.0" prefHeight="15.0" prefWidth="129.0" text="Minimum Stock" />
+            <Button fx:id="addButton" layoutY="499.0" mnemonicParsing="false" onAction="#addProductHandler" prefHeight="36.0" prefWidth="321.0" text="Add Product" />
+            <Button layoutX="323.0" layoutY="499.0" mnemonicParsing="false" onAction="#closeProductHandler" prefHeight="36.0" prefWidth="276.0" text="Close" />
+            <Label layoutX="125.0" layoutY="420.0" prefHeight="15.0" prefWidth="129.0" text="Maximum Stock" />
+            <TextField fx:id="maxStockField" layoutX="274.0" layoutY="415.0" onAction="#onTextEntered" />
+         </children>
+      </Pane>
+   </children>
+</VBox>

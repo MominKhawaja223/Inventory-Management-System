@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox alignment="CENTER" prefHeight="250.0" prefWidth="400.0" spacing="20" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ErrorController">
+   <children>
+      <Pane prefHeight="236.0" prefWidth="400.0">
+         <children>
+            <Separator layoutX="20.0" layoutY="85.0" prefHeight="0.0" prefWidth="367.0" />
+            <Label fx:id="error1Label" layoutX="129.0" layoutY="134.0" text="error1" textFill="#cd3131" visible="false" />
+            <Label fx:id="error2Label" layoutX="10.0" layoutY="134.0" text="error2" textFill="#1868c3">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Button layoutX="5.0" layoutY="210.0" mnemonicParsing="false" onAction="#errorCloseHandler" prefHeight="25.0" prefWidth="391.0" text="Close" />
+            <Label layoutX="83.0" layoutY="30.0" text="Inventory Status Window" textFill="#c62121">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</VBox>

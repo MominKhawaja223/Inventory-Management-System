@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="800.0" prefWidth="900.0" spacing="20" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InventoryListController">
+   <children>
+      <ImageView fitHeight="240.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+             <Image url="@../image/inventory.jpeg" />
+         </image>
+      </ImageView>
+      <Pane prefHeight="410.0" prefWidth="900.0">
+         <children>
+            <Separator layoutX="-5.0" layoutY="12.0" prefHeight="5.0" prefWidth="900.0" />
+            <Separator layoutX="-14.0" layoutY="73.0" prefHeight="5.0" prefWidth="900.0" />
+            <Label layoutX="285.0" layoutY="30.0" text="List of Inventory Items">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font></Label>
+            <Label layoutX="226.0" layoutY="93.0" prefHeight="15.0" prefWidth="420.0" text="To search for products, enter product name and press 'enter'" />
+            <TextField fx:id="filterProducts" layoutX="69.0" layoutY="122.0" onAction="#searchInventoryItems" prefHeight="25.0" prefWidth="700.0" />
+            <TableView fx:id="allProductsTable" layoutX="45.0" layoutY="166.0" prefHeight="179.0" prefWidth="804.0">
+              <columns>
+                <TableColumn fx:id="productID" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="productName" prefWidth="125.0" text="Product Name" />
+                  <TableColumn fx:id="productDescription" minWidth="0.0" prefWidth="200.0" text="Description" />
+                  <TableColumn fx:id="onHandQty" minWidth="0.0" prefWidth="100.0" text="Hand Qty" />
+                  <TableColumn fx:id="onOrderQty" minWidth="0.0" prefWidth="100.0" text="Order Qty" />
+                  <TableColumn fx:id="minStockLevel" minWidth="0.0" prefWidth="100.0" text="Min. Stock" />
+                  <TableColumn fx:id="maxStockLevel" minWidth="0.0" prefWidth="100.0" text="Max Stock" />
+              </columns>
+            </TableView>
+            <Button layoutX="2.0" layoutY="361.0" mnemonicParsing="false" onAction="#addNewInventoryItem" prefHeight="42.0" prefWidth="221.0" text="Add Product" />
+            <Button layoutX="657.0" layoutY="361.0" mnemonicParsing="false" onAction="#closeHandler" prefHeight="42.0" prefWidth="238.0" text="Close" />
+            <Button layoutX="220.0" layoutY="361.0" mnemonicParsing="false" onAction="#createPurchaseOrder" prefHeight="42.0" prefWidth="227.0" text="Create Purchase Order" />
+            <Button layoutX="444.0" layoutY="361.0" mnemonicParsing="false" onAction="#generateReports" prefHeight="42.0" prefWidth="227.0" text="View Report" />
+         </children>
+      </Pane>
+   </children>
+</VBox>

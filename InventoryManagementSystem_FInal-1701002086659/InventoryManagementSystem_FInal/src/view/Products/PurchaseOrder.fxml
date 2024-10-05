@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="548.0" prefWidth="602.0" spacing="20" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PurchaseOrderController">
+   <children>
+      <Pane prefHeight="540.0" prefWidth="602.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="451.0" layoutX="185.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../image/inventory.jpeg" />
+               </image>
+            </ImageView>
+            <Separator layoutX="6.0" layoutY="159.0" prefHeight="0.0" prefWidth="589.0" />
+            <Separator layoutX="6.0" layoutY="192.0" prefHeight="0.0" prefWidth="589.0" />
+            <Label layoutX="190.0" layoutY="162.0" text="Create a Purchase Order">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font></Label>
+            <Label layoutX="179.0" layoutY="208.0" text="Product Id" />
+            <TextField fx:id="idField" disable="true" layoutX="274.0" layoutY="203.0" onAction="#onTextEntered" />
+            <TextField fx:id="nameField" disable="true" layoutX="274.0" layoutY="241.0" onAction="#onTextEntered" />
+            <Label layoutX="153.0" layoutY="246.0" text="Product Name" />
+            <TextField fx:id="descField" disable="true" layoutX="275.0" layoutY="293.0" onAction="#onTextEntered" />
+            <Label layoutX="169.0" layoutY="298.0" text="Description" />
+            <Label layoutX="113.0" layoutY="344.0" text="     Existing Quantity" />
+            <TextField fx:id="qtyField" disable="true" layoutX="274.0" layoutY="339.0" onAction="#onTextEntered" />
+            <Button fx:id="createButton" layoutY="499.0" mnemonicParsing="false" onAction="#createHandler" prefHeight="36.0" prefWidth="321.0" text="Create" />
+            <Button layoutX="323.0" layoutY="499.0" mnemonicParsing="false" onAction="#closePurchaseHandler" prefHeight="36.0" prefWidth="276.0" text="Close" />
+            <TextField fx:id="newQtyField" layoutX="269.0" layoutY="386.0" onAction="#onTextEntered" />
+            <Label layoutX="130.0" layoutY="391.0" text="     New Quantity" />
+            <Label layoutX="156.0" layoutY="442.0" text="Today's Date" />
+            <Label fx:id="currentDate" layoutX="274.0" layoutY="442.0" prefHeight="16.0" prefWidth="200.0" text="26/11/2023 14:38:00">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</VBox>
